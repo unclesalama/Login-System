@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="imgs/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Seymour+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+
+</head>
+<body>
+
+    <div class="container min-vh-100  " id="container">
+        <div class="form-container sign-up">
+            <div class="form">
+                <h1 class="fw-bold">Create Account</h1>
+            <span class="text-muted">use your E-Mail for Registration</span>
+            <input oninput="validateInput(this);"  class="form-control my-3 name-su" type="text" id="name" placeholder="Name" >
+            <div class="alert alert-danger p-1 mt-2 fw-lighter d-none">
+                <ul>
+                  <li>The  Name Must Begins With Upper Case Character.</li>
+                  <li>The  Name Must be At Least 3 Characters.</li>
+                </ul>
+              </div>
+            <input oninput="validateInput(this);" class="form-control my-3 email-su" type="email" id="email" placeholder="E-Mail">
+            <div class="alert alert-danger p-1 mt-2 fw-lighter d-none">
+                <ul>
+                  <li>The E-mail Must contains ""@"" sign.</li>
+                  <li>The E-mail Must contains domain after ""@"" sign.</li>
+                </ul>
+              </div>
+            <input oninput="validateInput(this);" class="form-control my-3 password-su" type="password" id="password" placeholder="password">
+            <div class="alert alert-danger p-1 mt-2 fw-lighter d-none">
+                <ul>
+                  <li>The Password Must be at least 8 character.</li>
+                  <li>The Password Must contains numbers and charecters.</li>
+                </ul>
+              </div>
+            <button class="btn btn-success p-3 rounded-4 signed ">Sign-UP <i class="fa-solid fa-right-to-bracket"></i></button>
+            </div>
+        </div>
+        <div class="form-container sign-in">
+            <div class="form">
+                <h1>Sign In</h1>
+            <span>use your E-Mail to sign-in</span>
+            <div class="confirmed d-none">Confirm Your Registration And Login Below  <i class="fa-solid fa-turn-down"></i> </div>
+            <input class="form-control my-3 loginMail  " type="email" placeholder="E-Mail">
+            <div class="alert alert-danger p-1 mt-2 fw-lighter d-none">
+                <ul>
+                  <li>The E-Mail is Invalid.</li>
+                  <li>PLEASE ENTER A CORRECT ONE.</li>
+                </ul>
+              </div>
+            <input class="form-control my-3 loginPass " type="password" placeholder="password">
+            <div class="alert alert-danger p-1 mt-2 fw-lighter d-none">
+                <ul>
+                  <li>The Password Isn't Correct.</li>
+                </ul>
+              </div>
+            <a href="#" class="fp">Forget Password!!</a>
+            <button  class="btn btn-success p-3 rounded-4 disabled loged">Sign-IN <i class="fa-solid fa-person-circle-check"></i></button>
+
+            </div>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1 class="text-white fw-bold">Welcome Back!</h1>
+                    <p > Enter Your Personal Details TO Use The Site .</p>
+                    <button class="hidden btn btn-outline-secondary" id="login">Sign-In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1 class="text-white fw-bold">Hello To Our Site</h1>
+                    <p > Register Your Personal Details TO Use The Site .</p>
+                    <button class="hidden btn btn-outline-secondary " id="register">Sign-UP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container d-none secContainer m-5">
+
+      <div id="logout"class="logout d-flex justify-content-end align-items-center ">
+        <button class="btn btn-danger"> Log Out </button>
+
+      </div>
+
+
+        <div class="d-flex justify-content-center align-items-center text-white welcome">
+            <h1 id="welcome"> </h1>
+        </div>
+
+        <div class="form-floating m-3">
+          <input  type="text" class="form-control border-0 border-bottom" id="recipeInput" placeholder="recipeInput">
+          
+          <label for="recipeInput">Enter The recipes you want</label>
+        </div>
+
+        <div id="rowData" class="row">
+          
+        </div>
+    </div>
+
+    
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Main.js"></script>
+</body>
+</html>
